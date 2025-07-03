@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Page 3</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    .container {
+      background: rgba(0,0,0,0.4);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .quiz {
+      margin: 20px 0;
+    }
+    .options button {
+      background-color: #1abc9c;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+      transition: background 0.3s;
+    }
+    .options button:hover {
+      background-color: #16a085;
+    }
+    .next-page {
+      display: none;
+      margin-top: 20px;
+    }
+    .ad-section {
+      margin-top: 30px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Last Quiz! Almost There</h1>
+    <div class="quiz">
+      <p><strong>What is 10 - 6?</strong></p>
+      <div class="options">
+        <button onclick="checkAnswer(3)">3</button>
+        <button onclick="checkAnswer(4)">4</button>
+        <button onclick="checkAnswer(5)">5</button>
+      </div>
+    </div>
+    <div class="next-page">
+      <a href="page4.html" style="color: #ecf0f1; font-size: 18px; text-decoration: underline;">Go to Final Page</a>
+    </div>
+    <div class="ad-section">
+      <!-- Replace below with ad network code -->
+      <p>[Ad Space: Your Ad Will Appear Here]</p>
+    </div>
+  </div>
+
+  <script>
+    function checkAnswer(answer) {
+      if (answer === 4) {
+        document.querySelector('.next-page').style.display = 'block';
+        alert('Correct! Click to continue.');
+      } else {
+        alert('Wrong answer! Try again.');
+      }
+    }
+  </script>
+</body>
+</html>
